@@ -10,10 +10,28 @@
     <!-- google font EB Garamond and poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 
     <!-- Custom tailwind CSS -->
+    <style>
+        .poppins{
+            font-family: "Poppins", sans-serif;
+        }
+        .eb-garamond{
+            font-family: "EB Garamond", serif;
+        }
+        .menu :where(li > details > summary):after{
+            margin-top: -0.4rem;
+            height: 0.7rem;
+            width: 0.7rem;
+            transform: rotate(-45deg);
+        }
+        .max-w-xs{
+            color: black;
+        }
+    </style>
+    <!-- custom color  -->
     <script>
         tailwind.config = {
           theme: {
@@ -28,7 +46,122 @@
       </script>
 </head>
 <body>
-    <header></header>
+    <header class="container mx-auto mt-4">
+        <div class="navbar bg-base-100 mb-12">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li><a>Home</a></li>
+                  <li>
+                    <details>
+                      <summary>Services</summary>
+                      <ul class="p-2">
+                        <li><a>Services 1</a></li>
+                        <li><a>Services 2</a></li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details>
+                      <summary>Cases</summary>
+                      <ul class="p-2">
+                        <li><a>Cases 1</a></li>
+                        <li><a>Cases 2</a></li>
+                        <li><a>Cases 3</a></li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details>
+                      <summary>Blog</summary>
+                      <ul class="p-2">
+                        <li><a>Blog 1</a></li>
+                        <li><a>Blog 2</a></li>
+                        <li><a>Blog 3</a></li>
+                        <li><a>Blog 4</a></li>
+                      </ul>
+                    </details>
+                  </li>
+                  <li>
+                    <details>
+                      <summary>Contact</summary>
+                      <ul class="p-2">
+                        <li><a>Contact</a></li>
+                      </ul>
+                    </details>
+                  </li>
+                </ul>
+              </div>
+              <a class="btn btn-ghost -ml-[15px] md:ml-0"><img src="./images/logo2.png" alt=""></a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a>Home</a></li>
+                <li>
+                  <details>
+                    <summary>Services</summary>
+                    <ul class="p-2">
+                      <li><a>Services 1</a></li>
+                      <li><a>Services 2</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>Cases</summary>
+                    <ul class="p-2">
+                      <li><a>Cases 1</a></li>
+                      <li><a>Cases 2</a></li>
+                      <li><a>Cases 3</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>Blog</summary>
+                    <ul class="p-2">
+                      <li><a>Blog 1</a></li>
+                      <li><a>Blog 2</a></li>
+                      <li><a>Blog 3</a></li>
+                      <li><a>Blog 4</a></li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>Contact</summary>
+                    <ul class="p-2">
+                      <li><a>Contact</a></li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <button class="btn text-white px-2 md:px-4 bg-primary-bg text-xs md:text-lg font-semibold poppins">Free Consultation</button>
+            </div>
+          </div>
+
+          <div>
+            <div class="hero rounded-lg mb-24" style="background-image: url('./images/banner.png');">
+                <div class="hero-overlay bg-opacity-20"></div>
+                <div class="hero-content text-center text-neutral-content text-white my-24">
+                  <div class="max-w-[45rem]">
+                    <h1 class="mb-5 text-5xl font-extrabold eb-garamond">We Provide Effective Legal Solutions</h1>
+                    <p class="mb-5 font-normal text-base poppins">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+
+                    <div>
+                        <input type="text" placeholder="Type here" class="input input-bordered w-full max-w-xs" />
+                        <button class="btn text-white px-4 bg-primary-bg text-lg font-semibold poppins ml-4 mt-5 md:mt-0 border-none">Search</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+    </header>
     <main></main>
     <footer></footer>
 </body>
